@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Pessoal</title>
+    <style>
+        /*definindo margem do corpo*/
+        body {
+            margin: 0;
+        }
+
+        /*criando grid*/
+        .container {
+            display: grid;
+        }
+
+        /*estilo do cabeçalho*/
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: darkblue;
+        }
+
+        /*criar o menu estilo*/
+        .menu {
+            grid-column-start:6;
+            grid-column-end: 12;
+            justify-content: center; /*aqui eu centralizo o menu*/
+            gap: 20px; 
+        } 
+
+        /*colocar onde a imagem irá ficar*/
+        .imagem {
+            grid-column-start:1;
+            grid-column-end: 3;
+        }
+
+        .principal {
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+        /*rodapé*/
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+        }
+
+        /*estilo da lista*/
+        ul {
+            list-style-type: none;
+            color: darkblue;
+        }
+        
+        /* como vai ficar quando vc passa o mouse emcima*/
+        a,
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid darkblue 1px;
+        }
+
+        li {
+            float: left;
+        }
+        
+        a:hover {
+            background-color: darkblue;
+            color: white;
+        }
+
+        /*media query para dispositivos móveis */
+        @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .imagem {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .principal {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1 style="color: white; text-align: center"> Portifólio: Mateus Amancio</h1>
+        <br>
+    </header>
+
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portifolio.html">Portifólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="container wrapper">
+        <aside class="imagem">
+            <img src="imagem.JPG">
+            <div class="infos">
+                <p><strong>Profissão:</strong> Analista contábil</p>
+                <p><strong>Foco:</strong> Implantação robôs RPA automação</p>
+                <p><strong>Data Nascimento:</strong> 21/03/1992, 32 anos</p>
+                <p><strong>RU:</strong> 4286029</p>
+            </div>
+        </aside>
+
+    <section class="principal">
+        <h1>Contato</h1>
+        <form>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome">
+            <br>
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email">
+            <br>
+            <label for="mensagem">Digite sua mensagem: </label>
+            <input type="text" id="mensagem" name="mensagem">
+            <br>
+            <button type="button" height="50px">Enviar</button>
+
+        </form>
+
+        
+    </section>
+
+    </div>
+    <footer class="containter">
+        <h1>Desenvolvido para fins educacionais por Mateus Amancio, RU: 4286029</h1>
+    </footer>
+
+
+</body>
+</html>
